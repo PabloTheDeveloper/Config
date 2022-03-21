@@ -1,15 +1,19 @@
 ## Nvim
-
 ### Opening Files
-`vim -O file1 file2` will open vertically
-`vim -o file1 file2` will open horizontally
-`vim -p file1 file2` will open each in a new tab
+- `nvim -O file1 file2` will open vertically
+- `nvim -o file1 file2` will open horizontally
+- `nvim -p file1 file2` will open each in a new tab
 
 ### Rearranging tabs
 `:tab 3` (moves current tab to position 3)
 `:tab2 3` (moves tab 2 to position 3)
 
 ### Normal Mode
+### Most Important Command 
+| Command | Description|
+|---------|------------|
+| :help X | looks up documention for X where X is a character or word or command(:command)|
+
 #### Basic Navigation
 | Keys | Description |
 |-----------|-------------|
@@ -24,12 +28,14 @@
 |$| Move to end of current line| 
 |0, ^| move to start of current line, move to first non-whitespace character|
 |I, A| move to start or end of line and go into insert mode|
-
+* _Strongly_ means treating as a WORD. A WORD is a contiguous collection of non-whitespace characters.
 #### Basic Editing
 | Keys | Description |
 |-----------|-------------|
 | r,R| replaces a single character, replaces till esc |
 | d,D, dd| based on next character pressed (w, deletes word), deletes from cursor on), deletes line(can be used with numbers) |
+| c, C| Requires a motion. It will remove a word or from one position to the next, deletes remainingly line and goes into insert mode|
+| s, S| Substitutes character. A count may be applied before (3s), Removes entire line and goes into insert mode |
 | x,X| cuts current character, cuts previous character|
 | y, yy| Yanks. Used with other commands. Copies current line (including new line)|
 | yiw| Copies current word|
@@ -57,11 +63,9 @@
 |ctrl+w l | move Focus Right |
 |ctrl+w k | move Focus Up|
 |ctrl+w j | move Focus Down|
-
 |ctrl+w w | switch between apps|
 |ctrl+w r | swap Forward|
 |ctrl+w R | swap Backward|
-
 |ctrl+w H | move Window Left|
 |ctrl+w L | move Window Right|
 |ctrl+w K | move Window Up|
@@ -99,7 +103,7 @@
 |o, O| open and show browsing options + history and open tabs(current,new tab)|
 |b,B| open bookmarked link (current, new tab)|
 
-## Tmux
+## Tmux (with repo config)
 ### Windowing Mode
 | Keys | Description |
 |------|-------------|
