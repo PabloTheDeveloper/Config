@@ -1,11 +1,12 @@
 # Guide
 " This is my vimium configuration.
-" I deviate from standard bindings.
+" I deviate from the standard bindings.
+" I think there is a better way to work with vimium.
 
 " Note: Vimium interprets text after " or # as comments.
 " Therefore I am prefacing each line of text with either symbol.
 
-unmapAll
+
 # Configuration 
 ## Right Hand - Home Row
 map j scrollDown
@@ -29,7 +30,7 @@ map <c-;> visitPreviousTab
 map <a-j> performFind
 map <a-k> performBackwardsFind
 map <a-l> enterFindMode
-mapkey <a-;> <c-[>
+mapkey <a-;> <c-[> # makes a-; converted to c-[. c-[ escapes from vimium's mode
 
 ### Prefix by "d"
 map  dd removeTab
@@ -37,7 +38,7 @@ map D restoreTab
 map dD moveTabToNewWindow 
 
 map dj goBack
-map dk goNext
+map dk goForward
 map dl Vomnibar.activateBookmarksInNewTab
 map d;  togglePinTab
 
