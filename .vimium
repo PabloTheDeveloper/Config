@@ -1,0 +1,65 @@
+# Guide
+" This is my vimium configuration.
+" I deviate from standard bindings.
+
+" Note: Vimium interprets text after " or # as comments.
+" Therefore I am prefacing each line of text with either symbol.
+
+unmapAll
+# Configuration 
+## Right Hand - Home Row
+map j scrollDown
+map k scrollUp
+map l Vomnibar.activateInNewTab
+map ; Marks.activateGotoMode swap 
+
+#### With Shift
+map K nextTab
+map J previousTab
+map L Vomnibar.activate
+map : Marks.activateGotoMode swap
+
+#### With Ctrl
+map <c-j> moveTabLeft
+map <c-k> moveTabRight
+map <c-l> Vomnibar.activateTabSelection
+map <c-;> visitPreviousTab
+
+#### Alt
+map <a-j> performFind
+map <a-k> performBackwardsFind
+map <a-l> enterFindMode
+mapkey <a-;> <c-[>
+
+### Prefix by "d"
+map  dd removeTab
+map D restoreTab
+map dD moveTabToNewWindow 
+
+map dj goBack
+map dk goNext
+map dl Vomnibar.activateBookmarksInNewTab
+map d;  togglePinTab
+
+map dJ mainFrame
+map dK nextFrame
+map dL Vomnibar.activateBookmarks
+
+map d? showHelp
+
+### Using "i"
+map i passNextKey
+map I enterInsertMode
+map <c-i> focusInput 
+map <c-I> enterVisualLineMode
+
+## Left Hand
+### Home Row
+map f LinkHints.activateRow
+map F LinkHints.ActivateModeToOpenInNewForegroundTab
+map <c-f> LinkHints.activateModeToOpenInNewTab
+map <c-F> LinkHints.activateModeWithQueue
+
+# d is used as a prefix key
+
+map s reload hard
